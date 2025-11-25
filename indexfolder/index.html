@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+</head>
+<body>
+    <h1>Chat App</h1>
+
+    <input id="msg" placeholder="Type message..." />
+    <button onclick="sendMsg()">Send</button>
+
+    <div id="chat"></div>
+
+    <script>
+        const ws = new WebSocket("ws://localhost:8001/ws/room1");
+
+        ws.onopen = () => console.log("Connected");
+
+        ws.onmessage = (event) => {
+            document.getElementById("chat").innerHTML += `<p>${event.data}</p>`;
+        };
+
+        function sendMsg() {
+            const text = document.getElementById("msg").value;
+            ws.send(text);
+        }
+    </script>
+</body>
+</html>
