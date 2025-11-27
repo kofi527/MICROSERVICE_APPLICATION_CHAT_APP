@@ -13,6 +13,7 @@
 8.  Live Share (optional, for collaboration)
 
 **Project overview and steps to execution**
+  ---
 * The various tools and required programs above were duly installed prior to project exection
 * we had the chat-service and the user-service as two seperate folders which included the various directory
 * The chat service and user service each have their dockerfiles to help with building the images
