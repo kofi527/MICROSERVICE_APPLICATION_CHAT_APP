@@ -18,3 +18,18 @@ Project overview and steps to execution
 * A docker-compose file was used to help build final images from the above dockerfiles within their individual setups
 
 Errors encountered during the Backend project
+  ---
+1. **First error appears in   using the docker-compose –build**
+   
+   error details
+   
+    APPLICATION/chat-app/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion
+
+First error here is associated with the docker compose file, which relies the docker hub login/authentication when pulling the postgres:14 image: This is showing incorrect username or password in relation to dockerhub.   
+
+2. **Third error we are experiencing was the dockerfiles and its content within the individual applications for both chat service and user service**
+
+3. **Importerror:**
+   cannot import name 'Message' from 'models' (/app/models.py) . This error means that inside the chat-service, /appmodels.py has a class message that does not exist or is named differently
+
+    This is a common cause in Django or Flask applications. It occurs when two or more modules attempt to import from each other, creating a dependency loop that the interpreter cannot resolve. For example, if models.py imports something from            views.py, and views.py then tries to import Message from models.py, a circular dependency exists.
