@@ -41,6 +41,8 @@
 
 
 Errors encountered during the Backend project
+
+This area resolves all the basic errors encountered during the building and implementation of the micorsoervice application
   ---
 1. **First error appears in   using the docker-compose –build**
    
