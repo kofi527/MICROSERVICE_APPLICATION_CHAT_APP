@@ -18,7 +18,7 @@
 * we had the chat-service and the user-service as two seperate folders which included the various directory
 * The chat service and user service each have their dockerfiles to help with building the images
 * A docker-compose file was used to help build final images from the above dockerfiles within their individual setups
-* All services currently active after docker build command
+* All services currently active after docker build command. This helps the resources to be active during release
   
      <img width="468" height="95" alt="image" src="https://github.com/user-attachments/assets/9fbbdd90-1526-4980-bb45-d0f270bdfb04" />
 
